@@ -20,8 +20,8 @@ class MyProfile extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const <Widget>[
                     CircleAvatar(
-                      backgroundImage: NetworkImage(
-                        "https://lh3.googleusercontent.com/a-/AOh14GjrFgl_wF2k4nYQovAqsds8VDvJyiB8w3NIPdQg2g=s300-p-rw-no",
+                      backgroundImage: AssetImage(
+                        'assets/images/profile.jpg'
                       ),
                       radius: 50.0,
                     ),
