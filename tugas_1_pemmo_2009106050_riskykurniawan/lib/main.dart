@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_1_pemmo_2009106050_riskykurniawan/screens/main/main_screen.dart';
+import 'package:tugas_1_pemmo_2009106050_riskykurniawan/screens/login_page.dart';
+import 'package:tugas_1_pemmo_2009106050_riskykurniawan/screens/page_five.dart';
+import 'package:tugas_1_pemmo_2009106050_riskykurniawan/screens/page_four.dart';
+import 'package:tugas_1_pemmo_2009106050_riskykurniawan/screens/page_one.dart';
+import 'package:tugas_1_pemmo_2009106050_riskykurniawan/screens/page_three.dart';
+import 'package:tugas_1_pemmo_2009106050_riskykurniawan/screens/page_two.dart'; 
 
 void main() => runApp(const MyApp());
 
@@ -8,11 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Posttest 4',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyMainPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginPage(),
+        '/one': (context) => const PageOne(),
+        '/two': (context) => const PageTwo(),
+        '/three': (context) => const PageThree(),
+        '/four': (context) => const PageFour(),
+        '/five': (context) => const PageFive(),
+      }
     );
   }
 }
