@@ -188,8 +188,21 @@ class _MyForm extends State<MyForm> {
             margin: const EdgeInsets.only(top: 30, right: 25, left: 25),
             child: AnimatedButton(
               text: 'Submit',
-              color: Colors.green,
+              height: 40,
+              color: Colors.blueAccent,
               pressEvent: () {
+                final snackBar = SnackBar(
+                  content: const Text('Barang berhasil ditambahkan!'),
+                  action: SnackBarAction(
+                    label: 'Batalkan',
+                    onPressed: () {
+                      // Some code to undo the change.
+                    },
+                  ),
+                );
+
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
                 setState(() {
                   nama = controllerNama.text;
                   harga = controllerHarga.text;
@@ -206,7 +219,7 @@ class _MyForm extends State<MyForm> {
                   showCloseIcon: true,
                   title: 'Success',
                   desc:
-                      'Data anda berhasil disubmit',
+                      'Barang berhasil ditambahkan!',
                   btnOkOnPress: () {
                     debugPrint('OnClcik');
                   },
@@ -218,33 +231,6 @@ class _MyForm extends State<MyForm> {
               },
             ),
           ),
-          
-          // Container(
-          //   margin: const EdgeInsets.only(top: 30, right: 25, left: 25),
-          //   child: ElevatedButton(
-          //     style: ElevatedButton.styleFrom(
-          //       shape: RoundedRectangleBorder(
-          //         borderRadius: BorderRadius.circular(50)
-          //       ),
-          //       primary: Colors.blueAccent,
-          //     ),
-              // onPressed: () {
-                // setState(() {
-                //   nama = controllerNama.text;
-                //   harga = controllerHarga.text;
-                //   stok = controllerStok.text;
-                //   deskripsi = controllerDeskripsi.text;
-                //   jenis = dropdownValue;
-                //   warna = dropdownColorValue;
-                // });
-              // },
-          //     child:  Container(
-          //       height: 40,
-          //       alignment: Alignment.center,
-          //       child: Text("Submit"),
-          //     ),
-          //   ),
-          // ),
           Text("$nama $harga $stok $deskripsi $jenis $warna ")
         ],
       ),
