@@ -7,9 +7,9 @@ class GetxFormController extends GetxController {
   var harga = 0.obs;
   var stok = 0.obs;
   var deskripsi = ''.obs;
-  var jenis = 'Jenis Barang'.obs;
-  var warna = 'Warna Barang'.obs;
-
+  var jenis = 'Pilih Jenis'.obs;
+  var warna = 'Pilih Warna'.obs;
+  
   void setText(String value) {
     text.value = value;
   }
@@ -36,5 +36,7 @@ class GetxFormController extends GetxController {
   final namaEditingController = TextEditingController();
   final hargaEditingController = TextEditingController();
   final stokEditingController = TextEditingController();
+  final jenisEditingController = TextEditingController();
+  final warnaEditingController = TextEditingController();
   final deskripsiEditingController = TextEditingController();
 }

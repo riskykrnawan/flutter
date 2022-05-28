@@ -38,6 +38,13 @@ dependencies:
   google_fonts: ^2.3.2
   flutter_svg: ^1.0.3
   get: ^4.6.3
+  firebase_core: ^1.17.0
+  cloud_firestore: ^3.1.16
+  firebase_auth: ^3.3.18
+  firebase_storage: ^10.2.16
+  image_picker: ^0.8.4+9
+  path: ^1.8.1
+  dropdown_button2: ^1.5.2
 
 dev_dependencies:
   flutter_test:

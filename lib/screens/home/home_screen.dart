@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../main/main_screen.dart';
 import '/constants.dart';
 import '/screens/home/components/body.dart';
 
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: buildAppBar(),
       body: const Body(),
-      // bottomNavigationBar: MyMainPage(),
+      // bottomNavigationBar: MyMainScreen(),
     );
   }
 
